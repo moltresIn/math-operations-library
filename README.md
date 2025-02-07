@@ -86,7 +86,7 @@ Returns the factorial of a number. Throws an error if the number is negative.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-username/math-operations-library).
+Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/moltresIn/math-operations-library.git).
 
 ## License
 

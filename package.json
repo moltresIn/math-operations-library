@@ -6,7 +6,6 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "dependencies": {
-    "jest": "^29.7.0",
     "rollup": "^4.34.5"
   },
   "author": "Moltres",
