@@ -1,0 +1,24 @@
+{
+  "name": "math-operations-library",
+  "version": "1.0.0",
+  "description": "A library for various mathematical operations.",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "rollup": "^4.34.5"
+  },
+  "author": "Moltres",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "math",
+    "library",
+    "operations",
+    "add",
+    "subtract",
+    "factorial"
+  ]
+}
