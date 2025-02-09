@@ -47,3 +47,40 @@ export function factorial(number) {
   if (number === 0) return 1;
   return number === 1 ? 1 : number * factorial(number - 1);
 }
+
+// Array Addition
+export function addArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value + arr2[index]);
+}
+
+// Array Subtraction
+export function subtractArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value - arr2[index]);
+}
+
+// Array Multiplication
+export function multiplyArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value * arr2[index]);
+}
+
+// Array Division
+export function divideArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => {
+    if (arr2[index] === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+    return value / arr2[index];
+  });
+}

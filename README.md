@@ -1,11 +1,12 @@
 # Math Operations Library
 
-A lightweight JavaScript library providing essential mathematical operations, including addition, subtraction, multiplication, division, exponentiation, square root, modulus, and factorial.
+A lightweight JavaScript library providing essential mathematical operations, including addition, subtraction, multiplication, division, exponentiation, square root, modulus, and factorial. Now supports operations on arrays.
 
 ## Features
 
 - Perform basic arithmetic operations: add, subtract, multiply, divide
 - Advanced operations: exponentiation, square root, modulus, and factorial
+- Array operations: perform addition, subtraction, multiplication, and division on arrays
 - Simple API for quick integration into any project
 
 ## Installation
@@ -34,20 +35,20 @@ import {
   subtract,
   multiply,
   divide,
-  exponentiate,
-  squareRoot,
-  modulus,
-  factorial,
+  addArray,
+  subtractArray,
+  multiplyArray,
+  divideArray,
 } from "math-operations-library";
 
 console.log(add(5, 3)); // 8
 console.log(subtract(10, 4)); // 6
 console.log(multiply(2, 3)); // 6
 console.log(divide(10, 2)); // 5
-console.log(exponentiate(2, 3)); // 8
-console.log(squareRoot(16)); // 4
-console.log(modulus(10, 3)); // 1
-console.log(factorial(5)); // 120
+console.log(addArray([1, 2], [3, 4])); // [4, 6]
+console.log(subtractArray([5, 6], [2, 1])); // [3, 5]
+console.log(multiplyArray([2, 3], [4, 5])); // [8, 15]
+console.log(divideArray([10, 20], [2, 5])); // [5, 4]
 ```
 
 ### Functions Available
@@ -67,6 +68,22 @@ Returns the product of two numbers.
 #### `divide(a, b)`
 
 Returns the quotient of two numbers. Throws an error if `b` is zero.
+
+#### `addArray(arr1, arr2)`
+
+Adds two arrays element-wise. Throws an error if the arrays are of different lengths.
+
+#### `subtractArray(arr1, arr2)`
+
+Subtracts two arrays element-wise. Throws an error if the arrays are of different lengths.
+
+#### `multiplyArray(arr1, arr2)`
+
+Multiplies two arrays element-wise. Throws an error if the arrays are of different lengths.
+
+#### `divideArray(arr1, arr2)`
+
+Divides two arrays element-wise. Throws an error if the arrays are of different lengths or if an element in the second array is zero.
 
 #### `exponentiate(base, exponent)`
 
