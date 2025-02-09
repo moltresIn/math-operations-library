@@ -48,4 +48,41 @@ function factorial(number) {
   return number === 1 ? 1 : number * factorial(number - 1);
 }
 
-export { add, divide, exponentiate, factorial, modulus, multiply, squareRoot, subtract };
+// Array Addition
+function addArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value + arr2[index]);
+}
+
+// Array Subtraction
+function subtractArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value - arr2[index]);
+}
+
+// Array Multiplication
+function multiplyArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value * arr2[index]);
+}
+
+// Array Division
+function divideArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => {
+    if (arr2[index] === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+    return value / arr2[index];
+  });
+}
+
+export { add, addArray, divide, divideArray, exponentiate, factorial, modulus, multiply, multiplyArray, squareRoot, subtract, subtractArray };

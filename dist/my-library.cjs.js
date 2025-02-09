@@ -50,11 +50,52 @@ function factorial(number) {
   return number === 1 ? 1 : number * factorial(number - 1);
 }
 
+// Array Addition
+function addArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value + arr2[index]);
+}
+
+// Array Subtraction
+function subtractArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value - arr2[index]);
+}
+
+// Array Multiplication
+function multiplyArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => value * arr2[index]);
+}
+
+// Array Division
+function divideArray(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    throw new Error("Arrays must be of the same length");
+  }
+  return arr1.map((value, index) => {
+    if (arr2[index] === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+    return value / arr2[index];
+  });
+}
+
 exports.add = add;
+exports.addArray = addArray;
 exports.divide = divide;
+exports.divideArray = divideArray;
 exports.exponentiate = exponentiate;
 exports.factorial = factorial;
 exports.modulus = modulus;
 exports.multiply = multiply;
+exports.multiplyArray = multiplyArray;
 exports.squareRoot = squareRoot;
 exports.subtract = subtract;
+exports.subtractArray = subtractArray;
